@@ -5,8 +5,18 @@ const postLogin = JSON.parse(open('../fixtures/postLogin.json'))
 
 
 export const options = {
+<<<<<<< HEAD
     vus: 10,
     duration: '30s',
+=======
+    stages: [
+        { duration: '5s', target: 10 },
+        { duration: '20s', target: 10},
+        { duration: '5s', target: 0},
+        
+
+    ],
+>>>>>>> 3c0c02e (Adicionando stages ao teste)
     thresholds: {
         http_req_duration: ['p(90)<3000', 'max<5000'],
         http_req_failed: ['rate<0.01']
